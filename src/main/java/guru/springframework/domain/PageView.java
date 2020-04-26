@@ -1,17 +1,16 @@
 package guru.springframework.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by jt on 2/22/17.
  */
 @Entity
+@Table(name = "PAGEVIEW")
 public class PageView {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String pageUrl;
